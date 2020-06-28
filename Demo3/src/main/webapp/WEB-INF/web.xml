@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0">
+  
+	<servlet>
+    	<servlet-name>HomePage</servlet-name>
+    	<servlet-class>Servlet.HomePage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>HomePage</servlet-name>
+    	<url-pattern>/HomePage</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>loginCheck</servlet-name>
+    	<servlet-class>Servlet.loginCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>loginCheck</servlet-name>
+    	<url-pattern>/loginCheck</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>RegisterCheck</servlet-name>
+    	<servlet-class>Servlet.RegisterCheck</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>RegisterCheck</servlet-name>
+    	<url-pattern>/RegisterCheck</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>upload</servlet-name>
+    	<servlet-class>Servlet.upload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>upload</servlet-name>
+    	<url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>HP_GetNextPics</servlet-name>
+    	<servlet-class>Servlet.HP_GetNextPics</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>HP_GetNextPics</servlet-name>
+    	<url-pattern>/HP_GetNextPics</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>Detail</servlet-name>
+    	<servlet-class>Servlet.detail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>Detail</servlet-name>
+    	<url-pattern>/detail</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>userOperation</servlet-name>
+    	<servlet-class>Servlet.userOperation</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>userOperation</servlet-name>
+    	<url-pattern>/userOperation</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>AuthorSpace</servlet-name>
+    	<servlet-class>Servlet.AuthorSpace</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>AuthorSpace</servlet-name>
+    	<url-pattern>/AuthorSpace</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>My_Watch</servlet-name>
+    	<servlet-class>Servlet.My_Watch</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>My_Watch</servlet-name>
+    	<url-pattern>/My_Watch</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>Search</servlet-name>
+    	<servlet-class>Servlet.Search</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>Search</servlet-name>
+    	<url-pattern>/Search</url-pattern>
+    </servlet-mapping>
+</web-app>
