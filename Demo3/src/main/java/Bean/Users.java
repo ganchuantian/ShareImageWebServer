@@ -1,13 +1,13 @@
 package Bean;
 
 public class Users {
-	//�û�����
+	//???????
 	private String account;
 	private String uname;
 	private String password;
 	private String uinfo;
 	
-	//get/set����
+	//get/set????
 	
 	public String getAccount() {
 		return account;

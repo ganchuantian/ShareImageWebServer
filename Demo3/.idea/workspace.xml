@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Demo3:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ae61dba7-c444-4d0e-86ca-a8b49e163c8b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -9,6 +14,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -23,13 +35,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ex" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jar/org.springframework.jdbc-3.2.2.RELEASE.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.12" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.12" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -110,8 +125,19 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.1420765" />
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="运行" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -132,6 +158,8 @@
       <workItem from="1583594687155" duration="82000" />
       <workItem from="1583594785819" duration="177000" />
       <workItem from="1588074883952" duration="840000" />
+      <workItem from="1593317984009" duration="790000" />
+      <workItem from="1593320673342" duration="17747000" />
     </task>
     <servers />
   </component>
@@ -143,21 +171,69 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="223" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1588074943758" />
-    <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1588075126251">
+    <state x="389" y="110" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1593320904387">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1588075126251" />
-    <state x="266" y="175" key="Maven.ArtifactSearchDialog" timestamp="1588075064255">
+    <state x="389" y="110" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1536.864@0.0.1536.864" timestamp="1593320904387" />
+    <state x="361" y="91" key="#项目结构" timestamp="1593327606276">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="266" y="175" key="Maven.ArtifactSearchDialog/0.0.1536.864@0.0.1536.864" timestamp="1588075064255" />
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1583594806200">
+    <state x="361" y="91" key="#项目结构/0.0.1536.864@0.0.1536.864" timestamp="1593327606276" />
+    <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1593327140870">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1583594806200" />
-    <state x="178" y="42" key="new project wizard" timestamp="1583594954323">
+    <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1593327140870" />
+    <state width="1255" height="223" key="GridCell.Tab.0.bottom" timestamp="1593340774774">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="178" y="42" key="new project wizard/0.0.1536.864@0.0.1536.864" timestamp="1583594954323" />
+    <state width="1255" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.0.center" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.0.left" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.0.right" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.1.bottom" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.1.center" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.1.left" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.1.right" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.2.bottom" timestamp="1593340774775">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1593340774775" />
+    <state width="1255" height="223" key="GridCell.Tab.2.center" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.2.left" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state width="1255" height="223" key="GridCell.Tab.2.right" timestamp="1593340774774">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1255" height="223" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1593340774774" />
+    <state x="321" y="175" key="Maven.ArtifactSearchDialog" timestamp="1593327104880">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="321" y="175" key="Maven.ArtifactSearchDialog/0.0.1536.864@0.0.1536.864" timestamp="1593327104880" />
   </component>
 </project>

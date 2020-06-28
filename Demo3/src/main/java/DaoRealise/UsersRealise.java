@@ -15,7 +15,7 @@ import Database.*;
 public class UsersRealise implements usersDao {
 
 	@Override
-	public boolean loginCheck(String account, String password) {
+	public boolean loginCheck(String account, String password) throws SQLException {
 		// TODO Auto-generated method stub
 		if(password.equals(getPassword(account)))
 			return true;
@@ -48,17 +48,17 @@ public class UsersRealise implements usersDao {
 	}
 
 	@Override
-	public Users getMessage_ById(String account) {
+	public Users getMessage_ById(String account) throws SQLException {
 		// TODO Auto-generated method stub
 		Users user = new Users();
 		Database db = Database.get_DateBase();
 		Connection conn = db.get_DateBase().connect();
-		Statement st = null;
-		String sql = "Select * From usersTable where account='" + account + "'";
+		String sql = "Select * From usersTable where account=?";
+		PreparedStatement preState= (PreparedStatement) conn.prepareStatement(sql);
+		preState.setString(1, account);
 		ResultSet rs = null;
 		try {
-			st = conn.createStatement();
-			rs = st.executeQuery(sql);
+			rs = preState.executeQuery();
 			while(rs.next())
 			{
 				user.setAccount(rs.getString("account"));
@@ -69,23 +69,24 @@ public class UsersRealise implements usersDao {
 		}catch(SQLException e){
 			e.printStackTrace();
 		}finally {
-			db.close(conn, st);
+			conn.close();
 		}
 		return user;
 	}
 	
 	@Override
-	public String getPassword(String account) {
+	public String getPassword(String account) throws SQLException {
 		// TODO Auto-generated method stub
 		String pw = null;
 		Database db = Database.get_DateBase();
 		Connection conn = db.get_DateBase().connect();
-		Statement st = null;
-		String sql = "Select Password From usersTable where account='" + account + "';";
+		//String sql = "Select Password From usersTable where account='" + account + "';";
+		String sql = "Select Password From usersTable where account=?";
+		PreparedStatement preState= (PreparedStatement) conn.prepareStatement(sql);
+		preState.setString(1, account);
 		ResultSet rs = null;
 		try {
-			st = conn.createStatement();
-			rs = st.executeQuery(sql);
+			rs = preState.executeQuery();
 			if(rs.next())
 			{
 				pw = rs.getString("password");
@@ -93,7 +94,7 @@ public class UsersRealise implements usersDao {
 		}catch(SQLException e){
 			e.printStackTrace();
 		}finally {
-			db.close(conn, st);
+			conn.close();
 		}
 		return pw;
 	}

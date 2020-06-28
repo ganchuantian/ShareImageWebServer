@@ -15,10 +15,8 @@ import Bean.Photograph;
 import Bean.Users;
 import Dao.UsersAction;
 import Dao.photographDao;
-import Dao.usersDao;
 import Factory.UserActionFactory;
 import Factory.photographFactory;
-import Factory.usersFactory;
 import Method.sessionCheck;
 
 public class My_Watch extends HttpServlet {

@@ -32,7 +32,7 @@ public class FileMethod {
 	public String New_Img() {		//�����ɵ�ͼƬ 
 		try {
 			b = b64m.deCode();
-	        OutputStream output = new FileOutputStream("D:\\Tomcat\\apache-tomcat-9.0.12-windows-x64\\apache-tomcat-9.0.12\\webapps\\PicBase\\pic\\" + fileName);      
+	        OutputStream output = new FileOutputStream("D:\\Tomcat\\apache-tomcat-9.0.12\\webapps\\PicBase\\pic\\" + fileName);
 	        output.write(b);  
 	        output.flush();  
 	        output.close();
@@ -53,7 +53,7 @@ public class FileMethod {
 	}
 	
 	public boolean JudgeFileName(String name) {
-		File file = new File("D:\\Tomcat\\apache-tomcat-9.0.12-windows-x64\\apache-tomcat-9.0.12\\webapps\\PicBase\\pic\\"+name);
+		File file = new File("D:\\Tomcat\\apache-tomcat-9.0.12\\webapps\\PicBase\\pic\\"+name);
 		if(file.isDirectory())
 			return false;
 		else
@@ -63,7 +63,7 @@ public class FileMethod {
 	public static boolean deleteFile(String name) {
 		StringBuilder n = new StringBuilder(name);
 		n.replace(0, 3, "");
-		File file = new File("D:\\Tomcat\\apache-tomcat-9.0.12-windows-x64\\apache-tomcat-9.0.12\\webapps\\PicBase\\pic\\"+n.toString());
+		File file = new File("D:\\Tomcat\\apache-tomcat-9.0.12\\webapps\\PicBase\\pic\\"+n.toString());
 		try {
 			file.delete();
 			return true;

@@ -1,0 +1,114 @@
+		.Pics {
+				width: 1200px;
+				height: auto;
+				margin-top: 20px;
+				border: 2px solid #E9E7E7;
+				border-radius: 3px;
+				background-color: rgba(255, 255, 255, 0.5);
+			}
+			
+			#pic-box {
+				margin-top: 10px;
+				width: 400px;
+				height: 410px;
+				background-color: rgba(230,230,230,0.4);
+			}
+			
+			.pic {
+				width: 350px;
+				height: 350px;
+				border: 1px solid #D3D4D3;
+				vertical-align: middle;
+				background-color: rgba(210,210,210,0.5);
+				display: table-cell;
+			}
+			
+			#p:hover{
+				border: 2px solid #33AAFF;
+				cursor: pointer;
+			}
+			
+			.pic>img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			
+			.pics-box>div{
+				display: inline-block;
+				float: left;
+			}
+			
+			#owner{
+				width: 350px;
+				height: 60px;
+			}
+			
+			#owner>div{
+				display: inline-block;
+			}
+			
+			#someone{
+				width: 280px;
+				height: 60px;
+				background-color:rgba(255,255,255,0.3);
+				float: left;
+			}
+			
+			#someone div{
+				display: inline-block;
+			}
+			
+			#u_name{
+				width: 200 px;
+			}		
+			
+			.btn{
+				width: 50px;
+				height: 22px;
+				border: 1px solid #DDDDDD;
+				border-radius: 5px;
+				vertical-align: middle;
+				display: table-cell;
+			}
+			
+			#watch-btn{
+				color: white;
+				margin-top:20px;
+				margin-left:15px;
+				background-color: deepskyblue;
+
+			}
+			
+			#watch-btn:hover{
+				background-color: cornflowerblue;
+				cursor: pointer;
+			}
+			
+			#title {
+				vertical-align: middle;
+				margin-left: 10px;
+				margin-top: 5px;
+				width: 1175px;
+				height: 30px;
+				background-color: rgba(220,220,220,0.6);
+			}
+			
+			#title>div {
+				display: inline-block;
+			}
+			
+			#scroll {
+				background-position: center;
+				background-size:1400px;
+				background-image: url(../imgs/44.jpg);
+				background-color: #F7F7F7;
+				
+			}
+			
+			#button{
+				height: 30px;
+				bottom: -30px;
+				position:absolute;
+			}

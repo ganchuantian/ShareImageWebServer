@@ -9,20 +9,23 @@ import java.util.ArrayList;
 import Bean.Users;
 import Dao.UsersAction;
 import Database.Database;
+import com.mysql.jdbc.PreparedStatement;
 
 public class UsersActionRealise implements UsersAction{
 	
 	@Override
-	public int wacthCheck(String u_id, String author_id) {
+	public int wacthCheck(String u_id, String author_id) throws SQLException {
 		// TODO Auto-generated method stub
 		Database db = Database.get_DateBase();
 		Connection conn = db.get_DateBase().connect();
-		Statement st = null;
 		ResultSet rs = null;
-		String sql = "Select * From watchTable Where U_id='" + u_id + "' and Author_id='" + author_id + "';";
+		System.out.println(u_id+" "+author_id);
+		String sql = "Select * From watchTable Where U_id=? and Author_id=?";
+		PreparedStatement st = (PreparedStatement) conn.prepareStatement(sql);
+		st.setString(1,u_id);
+		st.setString(2,author_id);
 		try {
-			st = conn.createStatement();
-			rs = st.executeQuery(sql);
+			rs = st.executeQuery();
 			if(rs.next())
 			{
 				return 1;
@@ -38,17 +41,17 @@ public class UsersActionRealise implements UsersAction{
 	}
 
 	@Override
-	public int collectionCheck(String u_id, String p_id) {
+	public int collectionCheck(String u_id, String p_id) throws SQLException {
 		// TODO Auto-generated method stub
 		Database db = Database.get_DateBase();
 		Connection conn = db.get_DateBase().connect();
-		Statement st = null;
 		ResultSet rs = null;
-		Integer.parseInt(p_id);
-		String sql = "Select * From collectionsTable Where U_id='" + u_id + "' and P_id=" + Integer.parseInt(p_id) + ";";
+		String sql = "Select * From collectionsTable Where U_id=? and P_id=?";
+		PreparedStatement st = (PreparedStatement) conn.prepareStatement(sql);
+		st.setString(1,u_id);
+		st.setLong(2, Long.parseLong(p_id));
 		try {
-			st = conn.createStatement();
-			rs = st.executeQuery(sql);
+			rs = st.executeQuery();
 			if(rs.next())
 			{
 				return 2;
@@ -88,15 +91,16 @@ public class UsersActionRealise implements UsersAction{
 	}
 
 	@Override
-	public boolean deleteWatch(String u_id, String author_id) {
+	public boolean deleteWatch(String u_id, String author_id) throws SQLException {
 		// TODO Auto-generated method stub
 		Database db = Database.get_DateBase();
 		Connection conn = db.get_DateBase().connect();
-		Statement st = null;
-		String sql = "DELETE FROM watchTable WHERE u_id='" + u_id + "' and author_id='" + author_id + "'";
+		String sql = "DELETE FROM watchTable WHERE u_id=? and author_id=?";
+		PreparedStatement st = (PreparedStatement) conn.prepareStatement(sql);
 		try {
-			st = conn.createStatement();
-			st.execute(sql);
+			st.setString(1,u_id);
+			st.setString(2,author_id);
+			st.execute();
 			return true;
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -112,12 +116,12 @@ public class UsersActionRealise implements UsersAction{
 		int n = 0;
 		Database db = Database.get_DateBase();
 		Connection conn = db.get_DateBase().connect();
-		java.sql.PreparedStatement st = null;
+		PreparedStatement st = null;
 		String sql = "insert into collectionsTable(U_id,P_id) values(?,?)";
 		try {
-			st=conn.prepareStatement(sql);
+			st= (PreparedStatement) conn.prepareStatement(sql);
 			st.setString(1, u_id);
-			st.setLong(2, Integer.parseInt(p_id));
+			st.setLong(2, Long.parseLong(p_id));
 			n = st.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -131,15 +135,17 @@ public class UsersActionRealise implements UsersAction{
 	}
 
 	@Override
-	public boolean deleteCollection(String u_id, String p_id) {
+	public boolean deleteCollection(String u_id, String p_id) throws SQLException {
 		// TODO Auto-generated method stub
 		Database db = Database.get_DateBase();
 		Connection conn = db.get_DateBase().connect();
-		Statement st = null;
-		String sql = "DELETE FROM collectionsTable WHERE u_id='" + u_id + "' and p_id=" + Integer.parseInt(p_id);
+
+		String sql = "DELETE FROM collectionsTable WHERE u_id=? and p_id=?";
+		PreparedStatement st = (PreparedStatement) conn.prepareStatement(sql);
 		try {
-			st = conn.createStatement();
-			st.execute(sql);
+			st.setString(1,u_id);
+			st.setLong(2, Long.parseLong(p_id));
+			st.execute();
 			return true;
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -155,12 +161,13 @@ public class UsersActionRealise implements UsersAction{
 		ArrayList<Users> authors = new ArrayList<Users>();
 		Database db = Database.get_DateBase();
 		Connection conn = db.get_DateBase().connect();
-		Statement st = null;
-		String sql = "Select account,uName From usersTable Where account in (Select Author_id From watchTable Where u_id='" + u_id + "')";
+		PreparedStatement st = null;
+		String sql = "Select account,uName From usersTable Where account in (Select Author_id From watchTable Where u_id=?)";
 		ResultSet rs = null;
 		try {
-			st = conn.createStatement();
-			rs = st.executeQuery(sql);
+			st = (PreparedStatement) conn.prepareStatement(sql);
+			st.setString(1,u_id);
+			rs = st.executeQuery();
 			while(rs.next())
 			{ 
 				Users u = new Users();

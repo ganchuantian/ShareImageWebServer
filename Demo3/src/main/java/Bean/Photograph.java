@@ -1,6 +1,5 @@
 package Bean;
 
-import org.apache.commons.codec.binary.Base64;
 public class Photograph {
 	private  String p_id;
 	private String u_id;
